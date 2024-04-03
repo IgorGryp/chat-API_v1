@@ -11,7 +11,8 @@ channelService.getAllChannels = async () => {
     return channels;
 };
 
-channelService.getAllMessagesInChannel = async (channelId) => {
+channelService.getAllMessagesInChannel = async (id) => {
+    const channelId = new ObjectId(id);
     const channelsCollection = fetchCollection("channels");
     const channel = await channelsCollection.findOne({ _id: channelId });
     if (!channel) {
@@ -39,7 +40,8 @@ channelService.createMessageInChannel = async (id, newMessage) => {
     return newMessage;
 };
 
-channelService.deleteChannel = async (channelId) => {
+channelService.deleteChannel = async (id) => {
+    const channelId = new ObjectId(id);
     const channelsCollection = fetchCollection("channels");
     await channelsCollection.deleteOne({ _id: channelId });
 };
