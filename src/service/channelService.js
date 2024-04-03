@@ -1,6 +1,7 @@
 // channelService.js
 
 import { fetchCollection } from '../mongodb/mongoDbClient.js';
+import { ObjectId } from "mongodb";
 
 const channelService = {};
 
@@ -25,7 +26,8 @@ channelService.createChannel = async (newChannel) => {
     return result.ops;
 };
 
-channelService.createMessageInChannel = async (channelId, newMessage) => {
+channelService.createMessageInChannel = async (id, newMessage) => {
+    const channelId = new ObjectId(id);
     const channelsCollection = fetchCollection("channels");
     const result = await channelsCollection.updateOne(
         { _id: channelId },
