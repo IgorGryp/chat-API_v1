@@ -4,5 +4,7 @@ node_modules/
 # Ignore package-lock.json
 package-lock.json
 
-#ignore config file
-config.js
+
+#Ignore config.js
+src/config/
+

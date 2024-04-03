@@ -1,12 +1,13 @@
-const express = require("express");
+import express from "express";
+import channelController from '../controller/channelController.js';
+import authService from '../service/authService.js';
+
 const router = express.Router();
-const channelController = require("../controllers/channelController");
-const authService = require("../services/authService");
 
 router.get("/channel", channelController.getAllChannels);
 router.get("/channel/:id", channelController.getAllMessagesInChannel);
-router.put("/channel", authService.authenticateToken, channelController.createChannel);
-router.post("/channel/:id", authService.authenticateToken, channelController.createMessageInChannel);
-router.delete("/channel/:id", authService.authenticateToken, channelController.deleteChannel);
+router.put("/channel", channelController.createChannel);
+router.post("/channel/:id", channelController.createMessageInChannel);
+router.delete("/channel/:id", channelController.deleteChannel);
 
 export default router;
