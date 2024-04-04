@@ -1,9 +1,11 @@
+//broadcastRoutes.js
+
 import express from "express";
 import broadcastController from '../controller/broadcastController.js';
 
 const router = express.Router();
 
-router.get("/broadcasts", broadcastController.getAllMessages);
-router.post("/broadcasts", broadcastController.createMessage);
+router.get("/broadcast", broadcastController.getAllMessages);
+router.post("/broadcast", broadcastController.createMessage);
 
 export default router;
