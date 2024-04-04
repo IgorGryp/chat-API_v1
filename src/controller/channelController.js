@@ -1,6 +1,6 @@
 // channelController.js
 
-import channelService from '../service/channelService.js';
+import channelService from "../service/channelService.js";
 
 const channelController = {};
 
@@ -29,7 +29,7 @@ channelController.createChannel = async (req, res) => {
     try {
         const newChannel = req.body;
         const createdChannel = await channelService.createChannel(newChannel);
-        res.status(201).json(createdChannel);
+        res.status(201).json({ message: "Channel created", channel: createdChannel });
     } catch (error) {
         console.error("Error creating channel:", error);
         res.status(500).json({ error: "Internal Server Error" });
@@ -52,7 +52,7 @@ channelController.deleteChannel = async (req, res) => {
     try {
         const channelId = req.params.id;
         await channelService.deleteChannel(channelId);
-        res.sendStatus(204);
+        res.status(200).json({ message: "Channel deleted" });
     } catch (error) {
         console.error("Error deleting channel:", error);
         res.status(500).json({ error: "Internal Server Error" });
