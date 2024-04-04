@@ -4,7 +4,7 @@ import jwtFilter from '../middleware/jwtFilter.js';
 
 const router = express.Router();
 
-router.get("/channel",jwtFilter.authorize, channelController.getAllChannels);
+router.get("/channel", channelController.getAllChannels);
 router.get("/channel/:id",jwtFilter.authorize, channelController.getAllMessagesInChannel);
 router.put("/channel",jwtFilter.authorize, channelController.createChannel);
 router.post("/channel/:id",jwtFilter.authorize, channelController.createMessageInChannel);
