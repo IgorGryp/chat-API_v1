@@ -22,7 +22,7 @@
 }
 ```
 
-
+<br>
 
 ### Register - _Registrerar användare och lösenord_
 
@@ -39,6 +39,7 @@
 }
 ```
 
+<br>
 
 ## Broadcast
 
@@ -48,6 +49,7 @@
 
 **URL:** http://localhost:3000/broadcast
 
+<br>
 
 ### Skapa meddelande på broadcast
 
@@ -64,6 +66,8 @@
 }
 ```
 
+<br>
+
 ## Channels (Kräver inloggning - Bearer token)
 
 ### Hämta alla kanaler _(Kräver inte inloggning)_
@@ -72,6 +76,7 @@
 
 **URL:** http://localhost:3000/channel
 
+<br>
 
 ### Skapa ny kanal
 
@@ -89,11 +94,15 @@
 }
 ```
 
+<br>
+
 ### Hämta alla meddelanden i specifik kanal
 
 **Metod:** GET
 
 **URL:** http://localhost:3000/channel/:id
+
+<br>
 
 ### Skapa ett nytt meddelande i specifik kanal
 
@@ -109,6 +118,8 @@
   "message": "Ett nytt meddelande"
 }
 ```
+
+<br>
 
 ### Ta bort kanal
 
