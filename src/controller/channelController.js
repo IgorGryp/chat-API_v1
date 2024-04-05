@@ -1,6 +1,7 @@
 // channelController.js
 
 import channelService from "../service/channelService.js";
+import jwtUtils from "../util/jwtUtils.js";
 
 const channelController = {};
 
@@ -28,6 +29,8 @@ channelController.getAllMessagesInChannel = async (req, res) => {
 channelController.createChannel = async (req, res) => {
     try {
         const newChannel = req.body;
+        newChannel.createdAtDate = new Date().toLocaleDateString(); // Current datestamp
+        newChannel.createdAtTime = new Date().toLocaleTimeString(); // Current timestamp
         const createdChannel = await channelService.createChannel(newChannel);
         res.status(201).json({ message: "Channel created", channel: createdChannel });
     } catch (error) {
@@ -40,6 +43,9 @@ channelController.createMessageInChannel = async (req, res) => {
     try {
         const channelId = req.params.id;
         const newMessage = req.body;
+        newMessage.createdBy = jwtUtils.verify(req.headers["authorization"].split(" ")[1]).username; // Extract username from JWT
+        newMessage.createdAtDate = new Date().toLocaleDateString(); // Current datestamp
+        newMessage.createdAtTime = new Date().toLocaleTimeString(); // Current timestamp
         const createdMessage = await channelService.createMessageInChannel(channelId, newMessage);
         res.status(201).json(createdMessage);
     } catch (error) {
