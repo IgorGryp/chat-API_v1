@@ -93,7 +93,7 @@
 
 **URL:** http://localhost:3000/channel/:id
 
-###Skapa ett nytt meddelande i specifik kanal
+### Skapa ett nytt meddelande i specifik kanal
 
 **Metod:** POST
 
