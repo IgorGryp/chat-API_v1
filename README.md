@@ -4,12 +4,11 @@
 
 #### Auth
 
-##### Login
-Ger tillbaka en token
+##### Login - Ger tillbaka en token
 
 **Metod:** POST
 **URL:** http://localhost:3000/auth/login
-Body: JSON
+**Body:** JSON
 
 ```json
 Copy code
