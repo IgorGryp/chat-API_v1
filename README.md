@@ -4,7 +4,7 @@
 
 #### Auth
 
-##### _Login_ - Ger tillbaka en token
+##### **_Login_** - Ger tillbaka en token
 
 **Metod:** POST
 
