@@ -1,4 +1,4 @@
-## Chatt API Version 1
+## Chat API Version 1
 
 ### Endpoints och syntax:
 
