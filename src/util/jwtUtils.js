@@ -9,7 +9,7 @@ function generate(claims) {
   let options = {
     issuer: "chat-api",
     subject: "Auth token for chat api",
-    expiresIn: "60m"
+    expiresIn: "1h"
   }
 
   return jwt.sign(claims, mySecret, options);
