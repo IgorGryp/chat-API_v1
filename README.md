@@ -4,11 +4,10 @@
 
 
 
-#### Auth
+## Auth
 
 
-
-##### --Login-- - Ger tillbaka en token
+### Login - _ger tillbaka token_
 
 **Metod:** POST
 
@@ -25,7 +24,7 @@
 
 
 
-##### Register - Registrerar användare och lösenord
+### Register - _Registrerar användare och lösenord_
 
 **Metod:** POST
 
@@ -40,52 +39,76 @@
 }
 ```
 
-Broadcast
-Hämta meddelanden från broadcast
-Metod: GET
-URL: http://localhost:3000/broadcast
 
-Skapa meddelande på broadcast
-Metod: POST
-URL: http://localhost:3000/broadcast
-Body: JSON
+## Broadcast
 
-json
-Copy code
+### Hämta meddelanden från broadcast
+
+**Metod:** GET
+
+**URL:** http://localhost:3000/broadcast
+
+
+### Skapa meddelande på broadcast
+
+**Metod:** POST
+
+**URL:** http://localhost:3000/broadcast
+
+**Body:** JSON
+
+
+```json
 {
   "message": "Broadcast message"
 }
-Channels (Kräver inloggning - Bearer token)
-Hämta alla kanaler (Kräver inte inloggning)
-Metod: GET
-URL: http://localhost:3000/channel
+```
 
-Skapa ny kanal
-Metod: PUT
-URL: http://localhost:3000/channel
-Body: JSON
+## Channels (Kräver inloggning - Bearer token)
 
-json
-Copy code
+### Hämta alla kanaler _(Kräver inte inloggning)_
+
+**Metod:** GET
+
+**URL:** http://localhost:3000/channel
+
+
+### Skapa ny kanal
+
+**Metod:** PUT
+**URL:** http://localhost:3000/channel
+**Body:** JSON
+
+```json
 {
   "channelName": "Nya kanalen",
   "description": "Ta bort mig",
   "messages": []
 }
-Hämta alla meddelanden i specifik kanal
-Metod: GET
-URL: http://localhost:3000/channel/:id
+```
 
-Skapa ett nytt meddelande i specifik kanal
-Metod: POST
-URL: http://localhost:3000/channel/:id
-Body: JSON
+### Hämta alla meddelanden i specifik kanal
 
-json
-Copy code
+**Metod:** GET
+
+**URL:** http://localhost:3000/channel/:id
+
+###Skapa ett nytt meddelande i specifik kanal
+
+**Metod:** POST
+
+**URL:** http://localhost:3000/channel/:id
+
+**Body:** JSON
+
+
+```json
 {
   "message": "Ett nytt meddelande"
 }
-Ta bort kanal
-Metod: DELETE
-URL: http://localhost:3000/channel/:id
+```
+
+### Ta bort kanal
+
+**Metod:** DELETE
+**URL:** http://localhost:3000/channel/:id
