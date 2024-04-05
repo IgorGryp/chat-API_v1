@@ -76,7 +76,9 @@
 ### Skapa ny kanal
 
 **Metod:** PUT
+
 **URL:** http://localhost:3000/channel
+
 **Body:** JSON
 
 ```json
@@ -111,4 +113,5 @@
 ### Ta bort kanal
 
 **Metod:** DELETE
+
 **URL:** http://localhost:3000/channel/:id
