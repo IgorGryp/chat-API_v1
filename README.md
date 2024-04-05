@@ -7,30 +7,33 @@
 ##### Login - Ger tillbaka en token
 
 **Metod:** POST
+
 **URL:** http://localhost:3000/auth/login
+
 **Body:** JSON
 
 ```json
-Copy code
 {
   "username": "User",
   "password": "Password"
 }
 ```
 
-##### Register
-Registrerar användare och lösenord
+##### Register - Registrerar användare och lösenord
 
-Metod: POST
-URL: http://localhost:3000/auth/register
-Body: JSON
+**Metod:** POST
 
-json
-Copy code
+**URL:** http://localhost:3000/auth/register
+
+**Body:** JSON
+
+```json
 {
   "username": "User",
   "password": "Password"
 }
+```
+
 Broadcast
 Hämta meddelanden från broadcast
 Metod: GET
