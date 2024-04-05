@@ -2,7 +2,11 @@
 
 ### Endpoints och syntax:
 
+
+
 #### Auth
+
+
 
 ##### **_Login_** - Ger tillbaka en token
 
@@ -18,6 +22,8 @@
   "password": "Password"
 }
 ```
+
+
 
 ##### Register - Registrerar användare och lösenord
 
