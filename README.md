@@ -2,9 +2,9 @@
 
 ### Endpoints och syntax:
 
-###Auth
+#### Auth
 
-####Login
+##### Login
 Ger tillbaka en token
 
 **Metod:** POST
@@ -19,7 +19,7 @@ Copy code
 }
 ```
 
-####Register
+##### Register
 Registrerar användare och lösenord
 
 Metod: POST
