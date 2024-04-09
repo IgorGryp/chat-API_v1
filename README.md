@@ -1,13 +1,31 @@
 ## Chat API Version 1
 
-### Endpoints och syntax:
+Socket.io client for Chat API can be found [here](https://github.com/InternetKungen/chat-API-http-chat)
+
+## Installation
+
+Installation can be done using npm:
+
+```bash
+npm install
+```
+
+## Usage
+
+To run the chat client, use the following command:
+
+```bash
+npm run dev
+```
+
+### Endpoints & syntax:
 
 
 
 ## Auth
 
 
-### Login - _ger tillbaka token_
+### Login - _retrurns token_
 
 **Metod:** POST
 
@@ -24,7 +42,7 @@
 
 <br>
 
-### Register - _Registrerar användare och lösenord_
+### Register - _Register username and password_
 
 **Metod:** POST
 
@@ -43,7 +61,7 @@
 
 ## Broadcast
 
-### Hämta meddelanden från broadcast
+### Get messages from broadcast
 
 **Metod:** GET
 
@@ -51,7 +69,7 @@
 
 <br>
 
-### Skapa meddelande på broadcast
+### Create message in broadcast
 
 **Metod:** POST
 
@@ -68,9 +86,9 @@
 
 <br>
 
-## Channels (Kräver inloggning - Bearer token)
+## Channels (Need login - Bearer token)
 
-### Hämta alla kanaler _(Kräver inte inloggning)_
+### Get all channels _(No login needed)_
 
 **Metod:** GET
 
@@ -78,7 +96,7 @@
 
 <br>
 
-### Skapa ny kanal
+### Create new channel
 
 **Metod:** PUT
 
@@ -88,15 +106,15 @@
 
 ```json
 {
-  "channelName": "Nya kanalen",
-  "description": "Ta bort mig",
+  "channelName": "New channel",
+  "description": "About channel",
   "messages": []
 }
 ```
 
 <br>
 
-### Hämta alla meddelanden i specifik kanal
+### Get all messages from specific channel
 
 **Metod:** GET
 
@@ -104,7 +122,7 @@
 
 <br>
 
-### Skapa ett nytt meddelande i specifik kanal
+### Create new message in specific channel
 
 **Metod:** POST
 
@@ -115,13 +133,13 @@
 
 ```json
 {
-  "message": "Ett nytt meddelande"
+  "message": "A new message"
 }
 ```
 
 <br>
 
-### Ta bort kanal
+### Remove channel
 
 **Metod:** DELETE
 
