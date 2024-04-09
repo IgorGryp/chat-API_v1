@@ -1,4 +1,7 @@
 ## Chat API Version 1
+A simple Chat API with MongoDB communication and storage.
+
+## Client
 
 Socket.io client for Chat API can be found [here](https://github.com/InternetKungen/chat-API-http-chat)
 
