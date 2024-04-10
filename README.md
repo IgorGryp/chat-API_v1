@@ -1,5 +1,6 @@
 ## Chat API Version 1
-A simple Chat API with MongoDB communication and storage.
+
+A simple Chat API with MongoDB integration for communication and data storage.
 
 ## Client
 
