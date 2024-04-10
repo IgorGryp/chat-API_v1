@@ -13,10 +13,21 @@ Installation can be done using npm:
 ```bash
 npm install
 ```
+### Database
+_NOTE_: You'll have to set a path to your database in mongoDbClient.js. The database should have the collections _users_ and _channels_.
+
+In src/config/ create _config.js_ with this information:
+
+```javascript
+export const dbDetails = {
+    username: "username",
+    password: "password"
+  };
+```
 
 ## Usage
 
-To run the chat client, use the following command:
+To run the chat API server, use the following command:
 
 ```bash
 npm run dev
