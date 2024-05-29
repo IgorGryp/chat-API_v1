@@ -34,23 +34,12 @@ let onlineUsers = {};
 io.on('connection', (socket) => {
   console.log(`User connected: ${socket.id}`);
 
-  /* ------------------------------------------- */
   // Handle user registration
   socket.on('register', (username) => {
     socket.username = username;
     onlineUsers[username] = socket.id;
     io.emit('updateUserStatus', onlineUsers);
   });
-
-  // Handle private messages
-  socket.on('privateMessage', (data) => {
-    const { to, message } = data;
-    const recipientSocketId = onlineUsers[to];
-    if (recipientSocketId) {
-      io.to(recipientSocketId).emit('privateMessage', { from: socket.username, message });
-    }
-  });
-  /* ------------------------------------------- */
 
   // Handle user setting their status
   socket.on('setStatus', (status) => {
